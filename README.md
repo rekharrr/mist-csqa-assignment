@@ -79,7 +79,7 @@ For UI Automation:
 1. Automate the Create Account Test case with the following steps: 
 a) Go to https://manage.ac2.mist.com/signin.html#!signup/register
 b) Enter the details for various fields.
-c) Click on the Create Account button. (Note: Sometimes we have CAPTCHA show up when we click the button. You can ignore the CAPTCHA and just ensure that you are able to click on the Create Account button and the test ends there.)
+c) Click the "Create Account" button. (Note: A CAPTCHA may appear when you click the button. You can ignore this -- just verify that the button is clickable. The test ends at that point).
 
 2. Sample test methods for navigating to the URL and ensuring we are on the right page have already been created in the framework.
 You can refer to them for guidance. 
