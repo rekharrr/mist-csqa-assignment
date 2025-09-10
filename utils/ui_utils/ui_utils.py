@@ -43,48 +43,18 @@ class UIUtils:
         chrome_options.add_argument('--window-size=1920,1080')
         chrome_options.add_argument('--disable-web-security')
         chrome_options.add_argument('--allow-running-insecure-content')
+        chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+        chrome_options.add_argument('--disable-extensions')
+        chrome_options.add_argument('--disable-gpu')
+        chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        chrome_options.add_experimental_option('useAutomationExtension', False)
 
-        # Method 1: Try to get the correct chromedriver path
-        try:
-            driver_path = UIUtils._get_chromedriver_path()
-            print(f"Using ChromeDriver at: {driver_path}")
-            service = Service(driver_path)
-            driver = webdriver.Chrome(service=service, options=chrome_options)
-            driver.implicitly_wait(Config.IMPLICIT_WAIT)
-            return driver
-        except Exception as e:
-            print(f"Method 1 failed: {e}")
-
-        # Method 2: Try with system ChromeDriver
-        try:
-            print("Trying system ChromeDriver...")
-            service = Service('/usr/local/bin/chromedriver')
-            driver = webdriver.Chrome(service=service, options=chrome_options)
-            driver.implicitly_wait(Config.IMPLICIT_WAIT)
-            return driver
-        except Exception as e:
-            print(f"Method 2 failed: {e}")
-
-        # Method 3: Try with Homebrew ChromeDriver
-        try:
-            print("Trying Homebrew ChromeDriver...")
-            service = Service('/opt/homebrew/bin/chromedriver')
-            driver = webdriver.Chrome(service=service, options=chrome_options)
-            driver.implicitly_wait(Config.IMPLICIT_WAIT)
-            return driver
-        except Exception as e:
-            print(f"Method 3 failed: {e}")
-
-        # Method 4: Try without specifying service (let Selenium find it)
-        try:
-            print("Trying default ChromeDriver...")
-            driver = webdriver.Chrome(options=chrome_options)
-            driver.implicitly_wait(Config.IMPLICIT_WAIT)
-            return driver
-        except Exception as e:
-            print(f"Method 4 failed: {e}")
-
-        raise Exception("All ChromeDriver initialization methods failed. Please install ChromeDriver manually.")
+        # Use Homebrew ChromeDriver (system-wide installation)
+        print("Using Homebrew ChromeDriver...")
+        service = Service('/opt/homebrew/bin/chromedriver')
+        driver = webdriver.Chrome(service=service, options=chrome_options)
+        driver.implicitly_wait(Config.IMPLICIT_WAIT)
+        return driver
 
     @staticmethod
     def _get_chromedriver_path():
