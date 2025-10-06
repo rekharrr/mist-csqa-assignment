@@ -90,9 +90,9 @@ TODO placeholder for test_create_account is available in create_account_tests.py
 ### SUBMISSION 
 
 Once complete, 
-> Please submit the PR to the same repository and send the PR link on the same email thread in which the assignment was mailed to you. 
+1. Please submit the PR to the same repository and send the PR link on the same email thread in which the assignment was mailed to you. 
 (or)
-> Please send the Zip file of the finished assignment (code) to us on the same email thread in which the assignment was mailed to you.
+2. Please send the Zip file of the finished assignment (code) to us on the same email thread in which the assignment was mailed to you.
 
 
 Thanks! 
