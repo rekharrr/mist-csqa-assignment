@@ -89,9 +89,8 @@ TODO placeholder for test_create_account is available in create_account_tests.py
 
 ### SUBMISSION 
 
-Once complete, 
-1. Please submit the PR to the same repository and send the PR link on the same email thread in which the assignment was mailed to you.
-   (For instructions on how to create a pull request , please refer to https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui)
+Once complete, Please submit the PR to the same repository and send the PR link on the same email thread in which the assignment was mailed to you.
+(For instructions on how to create a pull request , please refer to https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui)
 
 
 Thanks! 
