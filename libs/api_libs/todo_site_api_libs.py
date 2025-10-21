@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 # TODO - Candidate to add Site API Libs when working on the assignment.
-=======
-# TODO - Candidate to add Site API Libs when working on the assignment.
-# kib changes
-
 import requests
 import random
 import string
@@ -93,4 +88,4 @@ class TodoSiteApiLibs:
         except Exception as e:
             print(f"Error during site lifecycle: {e}")
 
->>>>>>> efa2975 (re creating PR)
+
